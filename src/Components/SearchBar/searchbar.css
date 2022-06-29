@@ -28,13 +28,13 @@
     outline: none;
   }
   .searchbar button {
-    background-color: #d85353;
+    background-color: white;
     border: none;
     outline: none;
     padding: 0 1rem;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    color: white;
+    color: grey
   }
   .searchbar button:hover {
     cursor: pointer;

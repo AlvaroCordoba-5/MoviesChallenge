@@ -1,31 +1,55 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getMovies } from "../../redux/action";
-import { FaSistrix } from "react-icons/fa"
-import './searchbar.css'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { searchMovie } from "../../redux/action";
+import { FaSistrix } from "react-icons/fa";
+import "./searchbar.css";
 
 function Searchbar() {
   const dispatch = useDispatch();
-  const movies = useSelector((state) => state.movies);
+  const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    dispatch(getMovies());
-  }, [dispatch]);
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value)
+    console.log(search)
+  };
 
-  return(
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(search.length>0){
+    dispatch(searchMovie(search));
+    setSearch("");
+    }else{
+      alert("enter a movie")
+    }
+    
+  };
+
+  return (
     <>
-    <div className="back">
-    <img  className="image" src={"https://image.tmdb.org/t/p/w500/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"}></img>
-    <form className="searchbar">
-                    <input type="search" className="search" size={30} placeholder='Enter your search...' value="" />
-                    <button >
-                        <FaSistrix size={25} className="glass" />
-                    </button>
-                </form>
-  </div>
-  
-  </>
-  )
+      <div className="back">
+        <img
+          className="image"
+          src={
+            "https://image.tmdb.org/t/p/w500/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
+          }
+        ></img>
+        <form className="searchbar">
+          <input
+            type="search"
+            className="search"
+            size={30}
+            placeholder="Enter your search..."
+            value={search}
+            onChange={(e) => handleChange(e)} 
+          />
+          <button onClick={(e) => handleSubmit(e)}>
+            <FaSistrix size={25} className="glass" />
+          </button>
+        </form>
+      </div>
+    </>
+  );
 }
 
 export default Searchbar;

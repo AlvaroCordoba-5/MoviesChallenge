@@ -3,6 +3,7 @@ import Card from "../Card/Card.jsx";
 import Searchbar from "../SearchBar/searchbar.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { getMovies } from "../../redux/action";
+import NoResults from "./noResults.jsx";
 
 import './home.css'
 
@@ -20,13 +21,16 @@ function Home() {
     <Searchbar></Searchbar>
     <div className="containerall">
       <div className="container">
-        {movies.results
-          ? movies.results.map((e) =>
+        {movies?
+        movies?.results
+          ? movies?.results.map((e) =>
            <Card 
            image={e.poster_path}
            name={e.title}
            />)
-          : null}
+           : <NoResults/>
+           :null
+        }
       </div>
       </div>
     </>

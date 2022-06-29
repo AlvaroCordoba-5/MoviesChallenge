@@ -15,6 +15,7 @@ export const getMovies=()=>{
 }
 
 export const searchMovie=(name)=>{
+console.log(name)
     return async function(dispatch){
         const res = await axios
         .get(`https://api.themoviedb.org/3/search/movie?api_key=5ad1a1125f0c1d3d69c2569e46f9b71b&query=${name}`)
