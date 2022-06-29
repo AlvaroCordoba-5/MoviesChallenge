@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const GET_MOVIES="GET_MOVIES"
 export const SEARCH_MOVIE="SEARCH_MOVIE"
+export const MOVIE_DETAIL="MOVIE_DETAIL "
 
 
 export const getMovies=()=>{
@@ -22,5 +23,15 @@ console.log(name)
         .then(response=>response.data)
         .catch(err=>console.error(err))
         dispatch({type:SEARCH_MOVIE,payload:res})
+    }
+}
+
+export const detailMovie=(id)=>{
+    return async function(dispatch){
+        const res = await axios
+        .get(`https://api.themoviedb.org/3/movie/${id}?api_key=5ad1a1125f0c1d3d69c2569e46f9b71b`)
+        .then(response=>response.data)
+        .catch(err=>console.error(err))
+        dispatch({type:MOVIE_DETAIL,payload:res})
     }
 }

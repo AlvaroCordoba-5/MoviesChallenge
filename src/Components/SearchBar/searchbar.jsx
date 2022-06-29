@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchMovie } from "../../redux/action";
 import { FaSistrix } from "react-icons/fa";
+import Swal from "sweetalert2";
 import "./searchbar.css";
 
 function Searchbar() {
@@ -20,7 +21,7 @@ function Searchbar() {
     dispatch(searchMovie(search));
     setSearch("");
     }else{
-      alert("enter a movie")
+      Swal.fire('Please write a movie first')
     }
     
   };
@@ -33,13 +34,14 @@ function Searchbar() {
           src={
             "https://image.tmdb.org/t/p/w500/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
           }
+          alt="img"
         ></img>
         <form className="searchbar">
           <input
             type="search"
             className="search"
             size={30}
-            placeholder="Enter your search..."
+            placeholder="Find your movie..."
             value={search}
             onChange={(e) => handleChange(e)} 
           />
