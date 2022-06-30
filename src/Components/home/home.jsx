@@ -8,12 +8,12 @@ import './home.css'
 
 function Home() {
   const dispatch = useDispatch();
-  const movies = useSelector((state) => state.movies);
+  var movies = useSelector((state) => state.movies);
   console.log(movies.results)
 
   useEffect(() => {
     dispatch(getMovies());
-  }, [dispatch]);
+  }, []);
 
   return (
     <>

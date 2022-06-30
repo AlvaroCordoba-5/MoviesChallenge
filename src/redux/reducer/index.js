@@ -42,10 +42,20 @@ const rootReducer = (state = initialState, { type, payload }) => {
         }
       }
       case FILTER_STARS:{
+        let moviesall=state.allmovies.results.filter(e=>Math.ceil(e.vote_average/2)===payload)
+        console.log(moviesall)
+if(moviesall.length<1){
+  alert("no movies")
         return{
           ...state,
-          moviesByScore:payload
+          movies:state.movies
         }
+      }else{
+        return{
+          ...state,
+          movies:moviesall
+        }
+      }
       }
     default:
       return state;

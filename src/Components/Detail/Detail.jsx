@@ -39,9 +39,6 @@ console.log(image)
       ):null}
       </p>
 
-      <a href={detail.homepage} target="_blank">
-        {detail.homepage}
-      </a>
       </div>
       <div className="contimage">
       <p className="text" >{detail.overview}</p>

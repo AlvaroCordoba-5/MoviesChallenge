@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import './stars.css'
+import { filterStars } from '../../redux/action';
+import { useDispatch } from 'react-redux';
 
 const stars=[1,2,3,4,5]
 
@@ -8,13 +10,17 @@ const stars=[1,2,3,4,5]
 function Stars() {
     const [selectedRate, setSelectedRate] = useState(null);
     const [hoveredRate, setHoveredRate] = useState(null);
+    let dispatch=useDispatch()
 
 const handleSubmit=(e,rate)=>{
     e.preventDefault();
     setSelectedRate(rate)
     
+    dispatch(filterStars(rate))
+    
 }
-console.log("SADA",selectedRate)
+
+
 
   return (
     <div class="stars">
