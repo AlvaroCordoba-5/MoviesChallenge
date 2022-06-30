@@ -1,0 +1,19 @@
+.stars {
+    margin-bottom: 40px;
+}
+
+.i {
+font-size: 2.6em;
+margin: 8px;
+  cursor: pointer;
+  color: #292f3d;
+  transition: color 0.5s;
+}
+
+.in-rate {
+    color: #ffcf87;
+  }
+
+.in-hover {
+    color: rgba(255, 207, 135, 0.3);
+  }    

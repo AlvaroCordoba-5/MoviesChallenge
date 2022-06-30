@@ -1,5 +1,25 @@
-.container{
+.all{
+    height:100vh;
     background-color:black;
+
+}
+.all h1{
+    display:flex;
+    justify-content: center;
+}
+
+.detail{
+    display: flex;
+    justify-content: center;
+    margin-top:100px;
+}
+.contenedor{
+    background-color:#111111;
+    width:60%;
+    height: 600px;
+    display:flex;
+    border-radius: 30px;
+    
     
 }
 
@@ -7,12 +27,14 @@
     display:flex;
     flex-direction: column;
     align-items:center;
+    margin-left: 20px;
 }
 
 .contimage{
     position: relative;
     display: inline-block;
     text-align: center;
+    margin:auto
 }
 .text{
     position: absolute;

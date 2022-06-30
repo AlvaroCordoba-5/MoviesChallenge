@@ -3,6 +3,7 @@ import axios from "axios";
 export const GET_MOVIES="GET_MOVIES"
 export const SEARCH_MOVIE="SEARCH_MOVIE"
 export const MOVIE_DETAIL="MOVIE_DETAIL "
+export const FILTER_STARS="FILTER_STARS"
 
 
 export const getMovies=()=>{
@@ -34,4 +35,11 @@ export const detailMovie=(id)=>{
         .catch(err=>console.error(err))
         dispatch({type:MOVIE_DETAIL,payload:res})
     }
+}
+
+export const filterStars=(score)=>{
+    return function (dispatch) {
+        return dispatch({ type: FILTER_STARS, payload: score });
+      };
+    
 }

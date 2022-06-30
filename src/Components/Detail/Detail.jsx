@@ -23,16 +23,21 @@ console.log(image)
 
   return (
     <>
+      <div className="all">
       <button onClick={handlesubmit}>Back to home</button>
-
-<div className="container" >
-   <div className="detailcard">
       <h1 style={{color:"white"}}>{detail.title}</h1>
+<div className="detail">
+<div className="contenedor" >
+   <div className="detailcard">
       <img style={{width:"200px",margin:"30px"}} src={ur + detail.poster_path}></img>
       <h3 style={{color:"white"}}>{detail.tagline}</h3>
-      {detail.genres?detail.genres.map(e=> <ul>
-        <li style={{color:"white"}}>{e.name}</li>
-      </ul>):null}
+      <p style={{color:"white"}}>
+      Genres:
+      {detail.genres?detail.genres.map(e=> 
+        
+        <a style={{color:"white"}}> {e.name}</a>
+      ):null}
+      </p>
 
       <a href={detail.homepage} target="_blank">
         {detail.homepage}
@@ -40,11 +45,12 @@ console.log(image)
       </div>
       <div className="contimage">
       <p className="text" >{detail.overview}</p>
-      <img style={{ opacity:"0.2"}} src={ur + detail.backdrop_path}></img>
+      <img style={{width:"600px",opacity:"0.2"}} src={ur + detail.backdrop_path}></img>
       </div>
      
     
-      
+      </div>
+      </div>
       </div>
     </>
   );

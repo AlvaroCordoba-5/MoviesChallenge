@@ -1,10 +1,12 @@
-import { GET_MOVIES, SEARCH_MOVIE, MOVIE_DETAIL } from "../action";
+import { GET_MOVIES, SEARCH_MOVIE, MOVIE_DETAIL,FILTER_STARS
+ } from "../action";
 import Swal from "sweetalert2";
 
 const initialState = {
   movies: [],
   allmovies: [],
   movieDetail: [],
+  moviesByScore:[]
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -37,6 +39,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
         return{
           ...state,
           movieDetail:payload
+        }
+      }
+      case FILTER_STARS:{
+        return{
+          ...state,
+          moviesByScore:payload
         }
       }
     default:
