@@ -26,18 +26,25 @@ console.log(image)
       <button onClick={handlesubmit}>Back to home</button>
 
 <div className="container" >
+   <div className="detailcard">
       <h1 style={{color:"white"}}>{detail.title}</h1>
+      <img style={{width:"200px",margin:"30px"}} src={ur + detail.poster_path}></img>
       <h3 style={{color:"white"}}>{detail.tagline}</h3>
-      <p style={{color:"white"}}>{detail.overview}</p>
-      <a href={detail.homepage} target="_blank">
-        {detail.homepage}
-      </a>
       {detail.genres?detail.genres.map(e=> <ul>
         <li style={{color:"white"}}>{e.name}</li>
       </ul>):null}
 
-      <img src={ur + detail.poster_path}></img>
+      <a href={detail.homepage} target="_blank">
+        {detail.homepage}
+      </a>
+      </div>
+      <div className="contimage">
+      <p className="text" >{detail.overview}</p>
       <img style={{ opacity:"0.2"}} src={ur + detail.backdrop_path}></img>
+      </div>
+     
+    
+      
       </div>
     </>
   );
