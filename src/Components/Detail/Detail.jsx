@@ -12,7 +12,8 @@ function Detail() {
   console.log(detail);
    let image= ur+detail.backdrop_path
 console.log(image)
-  useEffect(() => {
+  
+useEffect(() => {
     dispatch(detailMovie(id));
   }, [dispatch]);
 

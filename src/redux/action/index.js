@@ -38,7 +38,6 @@ export const detailMovie=(id)=>{
 }
 
 export const filterStars=(score)=>{
-   
     return function (dispatch) {
         return dispatch({ type: FILTER_STARS, payload: score });
       };

@@ -8,9 +8,10 @@ import './home.css'
 
 function Home() {
   const dispatch = useDispatch();
-  var movies = useSelector((state) => state.movies);
-  console.log(movies.results)
-
+  let movies = useSelector((state) => state.movies);
+  let filter= useSelector((state)=>state.moviesByScore)
+  console.log(movies)
+console.log(filter)
   useEffect(() => {
     dispatch(getMovies());
   }, []);
@@ -21,7 +22,8 @@ function Home() {
     <Stars></Stars>
     <div className="containerall">
       <div className="container">
-        {movies?
+        
+      {movies?
         movies?.results
           ? movies?.results.map((e) =>
            <Card 
@@ -31,7 +33,16 @@ function Home() {
            title={e.title}
            id={e.id}
            />)
-           : null
+           :
+           movies?.map((e) =>
+            <Card 
+            key={e.id}
+            image={e.poster_path}
+            name={e.title}
+            title={e.title}
+            id={e.id}
+            />)
+            
            :null
         }
       </div>
