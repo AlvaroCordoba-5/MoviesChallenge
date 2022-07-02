@@ -26,8 +26,11 @@
  display: flex;
  flex-direction: column;
  max-height: fit-content;   
+ width: 95%;
+ height: 100%;
   }
 }
+
 
 
 .detailcard{
@@ -47,13 +50,15 @@
     .contimage img{
 display: none;
   }
- .contimage text{
-    color:white
+ .contimage {
+    color:white;
+    max-width: fit-content;
  }
 }
 
 .text{
     color: white;
+    margin-left: 3px;
 }
 @media (min-width:720px){
 .text{
