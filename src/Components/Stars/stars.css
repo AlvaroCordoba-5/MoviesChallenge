@@ -8,10 +8,12 @@
   margin-left: 20px;
   border-radius: 5px;
   border: 1px solid transparent;
+  box-shadow: 2px 2px 2px 2px grey
 }
 .stars {
   
     margin-bottom: 40px;
+    
     
     
 }

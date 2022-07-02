@@ -16,17 +16,12 @@ function Stars() {
 ;
   
 
-  
-
 const handleSubmit=(e,rate)=>{
     e.preventDefault();
     setSelectedRate(rate)
     dispatch(filterStars(rate))
     
 }
-
-
-
 
 
   return (

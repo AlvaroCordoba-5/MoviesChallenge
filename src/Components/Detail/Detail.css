@@ -16,16 +16,16 @@
 }
 .contenedor{
     background-color:#111111;
-    width:60%;
     height: 600px;
     display:flex;
     border-radius: 30px;
-    box-shadow: 2px 2px 2px 1px white
+    box-shadow: 2px 2px 2px 2px white
 }
 @media (max-width:720px){
     .contenedor{
  display: flex;
- flex-direction: column;   
+ flex-direction: column;
+ max-height: fit-content;   
   }
 }
 

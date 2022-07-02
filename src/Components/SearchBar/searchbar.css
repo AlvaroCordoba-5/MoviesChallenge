@@ -43,6 +43,7 @@
   .searstar{
     display: flex;
     align-items: center;
+    
   }
   @media (max-width:720px){
     .searstar{
@@ -52,5 +53,6 @@
   }
   .searstar form{
     margin-bottom: 20px;
+    
   }
   }
