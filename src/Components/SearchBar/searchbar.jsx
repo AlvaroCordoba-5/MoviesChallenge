@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchMovie } from "../../redux/action";
 import { FaSistrix } from "react-icons/fa";
+import Stars from "../Stars/Stars";
 import Swal from "sweetalert2";
 import "./searchbar.css";
 
@@ -36,6 +37,7 @@ function Searchbar() {
           }
           alt="img"
         ></img>
+        <div className="searstar">
         <form className="searchbar">
           <input
             type="search"
@@ -49,6 +51,9 @@ function Searchbar() {
             <FaSistrix size={25} className="glass" />
           </button>
         </form>
+
+        <Stars></Stars>
+        </div>
       </div>
     </>
   );

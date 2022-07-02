@@ -30,6 +30,8 @@ const handleSubmit=(e,rate)=>{
 
 
   return (
+    <div className='rating'>
+      Rating:
     <div class="stars">
             {stars.map(rate => <i
               key={rate}
@@ -40,6 +42,7 @@ const handleSubmit=(e,rate)=>{
               onMouseEnter={() => {setHoveredRate(rate); setSelectedRate(null);}}
               onMouseLeave={() => setHoveredRate(null)}></i>)}
           </div>
+         </div>
   )
 }
 

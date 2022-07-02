@@ -40,3 +40,7 @@
     cursor: pointer;
     background-color: #fa9191;
   }
+  .searstar{
+    display: flex;
+    align-items: center;
+  }

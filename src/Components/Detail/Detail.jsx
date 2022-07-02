@@ -25,7 +25,7 @@ useEffect(() => {
   return (
     <>
       <div className="all">
-      <button onClick={handlesubmit}>Back to home</button>
+      <button className="button" onClick={handlesubmit}>Back to home</button>
       <h1 style={{color:"white"}}>{detail.title}</h1>
 <div className="detail">
 <div className="contenedor" >

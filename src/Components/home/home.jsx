@@ -10,7 +10,7 @@ function Home() {
   const dispatch = useDispatch();
   let movies = useSelector((state) => state.movies);
   let filter= useSelector((state)=>state.moviesByScore)
-  console.log(movies)
+  console.log(movies.results)
 console.log(filter)
   useEffect(() => {
     dispatch(getMovies());
@@ -18,8 +18,9 @@ console.log(filter)
 
   return (
     <>
+    
     <Searchbar></Searchbar>
-    <Stars></Stars>
+    
     <div className="containerall">
       <div className="container">
         
