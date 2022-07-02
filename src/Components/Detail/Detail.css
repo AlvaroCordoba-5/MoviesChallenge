@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     margin-top:100px;
+   
 }
 .contenedor{
     background-color:#111111;
@@ -19,9 +20,15 @@
     height: 600px;
     display:flex;
     border-radius: 30px;
-    
-    
+    box-shadow: 2px 2px 2px 1px white
 }
+@media (max-width:720px){
+    .contenedor{
+ display: flex;
+ flex-direction: column;   
+  }
+}
+
 
 .detailcard{
     display:flex;
@@ -33,15 +40,28 @@
 .contimage{
     position: relative;
     display: inline-block;
-    text-align: center;
+   
     margin:auto
 }
+@media (max-width:720px){
+    .contimage img{
+display: none;
+  }
+ .contimage text{
+    color:white
+ }
+}
+
+.text{
+    color: white;
+}
+@media (min-width:720px){
 .text{
     position: absolute;
     top: 50px;
     left: 10px;
     color:white
-}
+}}
 .button{
         background-color: #111111;
         border: none;
