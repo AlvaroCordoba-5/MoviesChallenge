@@ -13,11 +13,23 @@
  max-height: 100%;
    
 }
+@media (max-width:720px){
+  .image{
+   width: 70%;
+   
+}
+}
 
 .searchbar {
     display: flex;
     justify-content: center;
   }
+  @media (max-width:720px){
+    .search{
+     width: 70%;
+     
+  }
+}
   .searchbar .search {
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
