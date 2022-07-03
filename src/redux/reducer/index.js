@@ -45,7 +45,11 @@ const rootReducer = (state = initialState, { type, payload }) => {
         let moviesall=state.allmovies.results.filter(e=>Math.ceil(e.vote_average/2)===payload)
         console.log(moviesall)
 if(moviesall.length<1){
-  alert("no movies")
+  Swal.fire({
+    icon: "error",
+    title: "Oops...",
+    text: "No movies with that rating!",
+  });
         return{
           ...state,
           movies:state.movies
