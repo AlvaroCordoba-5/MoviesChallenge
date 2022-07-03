@@ -9,8 +9,9 @@
 
  .image{
     margin: 10px;
-    width: auto; 
- max-height: 100%;
+    width:60%; 
+ max-height: 80%;
+ border-radius: 5px;
    
 }
 @media (max-width:720px){

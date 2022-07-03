@@ -33,7 +33,7 @@ function Searchbar() {
         <img
           className="image"
           src={
-            "https://image.tmdb.org/t/p/w500/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg"
+            "https://image.tmdb.org/t/p/w500/zGLHX92Gk96O1DJvLil7ObJTbaL.jpg"
           }
           alt="img"
         ></img>
